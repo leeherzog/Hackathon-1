@@ -3,10 +3,10 @@ class petsRepository {
         this.pets = [];
     }
 
-    fetch(data) {
+    fetch() {
         return $.ajax({
           method: "GET",
-          url:"/pets"
+          url:"/pet"
         }) 
         .then ((data)=>{
             console.log(data);

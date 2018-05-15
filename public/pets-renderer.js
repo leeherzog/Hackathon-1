@@ -17,17 +17,6 @@ class PetsRenderer {
          // this.renderComments(pets, i);
         }
     }
-//delete it
-    // renderComments(pets, petIndex) {
-    //     let pet = $(".pet")[petIndex];
-    //     let $commentsList = $(pet).find('.comments-list');
-    //     $commentsList.empty();
-    //     let template = Handlebars.compile(this.$commentTemplate);
-    //     for (let i = 0; i < pets[petIndex].comments.length; i++) {
-    //       let newHTML = template(pets[petIndex].comments[i]);
-    //       $commentsList.append(newHTML);
-    //     }
-    // }
 }
 
 export default PetsRenderer

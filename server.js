@@ -53,24 +53,6 @@ app.post('/pets', (req, res) => {
   })
 });
 
-////my code
-// //when the client ask to add new pet
-// app.get('/pets', function (req, res) {
-//   console.log(req.body)
-//   var newpet = new pet({
-//     name: req.petText ,
-//     reviews: []
-//   })
-//   newpet.save((err, pet) => {
-//     //after it saved return the saved pet to the client, he'll get in the success function
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log('ok')
-//         res.send(pet);
-//     }
-//   })
-// });
 
 // 3) to handle deleting a pet
 app.delete(`/pets/:id`, (req, res) => {

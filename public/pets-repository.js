@@ -31,7 +31,6 @@ class petsRepository {
                 console.error(textStatus);
               });
             }
- 
 
 }
 

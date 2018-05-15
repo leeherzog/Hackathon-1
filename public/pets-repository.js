@@ -1,6 +1,7 @@
 class petsRepository {
     constructor() {
         this.pets = [];
+        this.counter = 0;
     }
 
     fetch() {
@@ -32,6 +33,7 @@ class petsRepository {
                 console.error(textStatus);
               });
             }
+
 
 }
 

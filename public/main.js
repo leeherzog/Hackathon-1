@@ -17,6 +17,8 @@ petsRepository.fetch().then(()=>{
 
 eventsHandler.registerAddPet();
 // eventsHandler.registerRemovePet();
+eventsHandler.registerLikePet();
+eventsHandler.registerUnlikePet();
 eventsHandler.registerToggleForm();
-//eventsHandler.registerAddComment();
-//eventsHandler.registerRemoveComment();
+
+

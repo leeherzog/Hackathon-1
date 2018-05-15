@@ -11,6 +11,7 @@ class petsRepository {
         .then ((data)=>{
             console.log(data);
             this.pets = data;
+        
         })
         .catch (function error (jqXHR, textStatus, errorThrown) {
             console.error(textStatus);

@@ -8,12 +8,19 @@ class PetsRenderer {
        // this.$commentTemplate = $('#comment-template').html();
     }
     renderPets(pets) {
+        console.log('inside of the renderpets func 2')
         this.$pets.empty();
-        let template = Handlebars.compile(this.$petTemplate);
-        for (let i = 0; i < pets.length; i++) {
-          let newHTML = template(pets[i]);
+        var template = Handlebars.compile(this.$petTemplate);
+        
+        for (var i = 0; i < pets.length; i++) {
+            console.log('before')
+            console.log(typeof pets[i])
+          var newHTML = template(pets[i]);
+
+         
          // console.log(newHTML);
           this.$pets.append(newHTML);
+          console.log('after')
          // this.renderComments(pets, i);
         }
     }

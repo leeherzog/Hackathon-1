@@ -21,8 +21,6 @@
                     <h1><img src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg" style="width: 20%"></img></h1>
                 </div>
 
-                
-
                 <form class="pet-form">
                     <h3>New Pet for Adoption</h3>
 
@@ -67,6 +65,8 @@
             </div>
         </div>
     </div>
+       <!--create 3 div classes with col-md-4 (3 columns) (template for handlebars)
+        Add form  s-->
     <script id="pet-template" type="text/x-handlebars-template">
         <div class="pet" data-id="{{_id}}"> {{name}} {{gender}}
             <button type="button" class="btn btn-danger remove-pet">Remove pet</button
@@ -78,6 +78,7 @@
             <button type="button" class="btn btn-sm btn-danger remove-comment">Remove Comment</button>
         </li>
     </script>
+
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="main.js" type="module"></script>

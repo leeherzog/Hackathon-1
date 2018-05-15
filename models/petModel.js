@@ -11,7 +11,8 @@ let petSchema = new mongoose.Schema({
     size : String,
     age : Number ,
     mail :String , 
-    img : String
+    img : String,
+    adopted :String
 });
 
 let Pet = mongoose.model('pets', petSchema)

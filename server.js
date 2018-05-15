@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // These will define your API:
 
 // 1) to handle getting all pets and their comments
-app.get('/pets', function (req, res) {
+app.get('/pet', function (req, res) {
   Pet.find().exec(function(err, pets){
     if (err){
       console.log(err)

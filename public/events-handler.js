@@ -3,6 +3,7 @@ class EventsHandler {
         this.petsRepository = petsRepository;
         this.petsRenderer = petsRenderer;
         this.$pets = $(".pets");
+        this.$addaptForm =$(".pet-form")
     }
 
     registerAddPet() {
@@ -15,9 +16,25 @@ class EventsHandler {
                 this.petsRepository.addPet(obj).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
             })
         }
-            // });        
-    // }
+         registerLikePet() {
+        $('.pets').on('click', () => {
+                this.petsRepository.addPet(obj).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
+            })
+        }
 
+        registerUnlikePet() {
+            $('.pets').on('click', () => {
+                    this.petsRepository.addPet(obj).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
+                })
+            }
+
+            // make the form toggle
+            registerToggleForm() {
+                $('.row').on('click','.toggle-comments', (event) => {
+                    $('.pet-form').toggleClass('show');
+                  });
+            }
+            
 }
 
 export default EventsHandler

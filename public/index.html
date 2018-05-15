@@ -57,7 +57,7 @@
                 E-mail:<input class="form-control" type="text" id="mail" placeholder="Enter pet mail"/>
             
     
-                Post an image of your pet:<input class="form-control" type="number" id="img" placeholder="Enter pet img"/>
+                Post an image of your pet:<input class="form-control" type="url" id="img" placeholder="Enter pet img"/>
             </div>
 
                     
@@ -67,17 +67,40 @@
             </div>
         </div>
     </div>
+
+
+
+
     <script id="pet-template" type="text/x-handlebars-template">
-        <div class="pet" data-id="{{_id}}"> {{name}} {{gender}}
-            <button type="button" class="btn btn-danger remove-pet">Remove pet</button
-           
+        <div class="row">
+                <div class="col-md-6">
+                  <div class="card-container">
+                    <div class="card item" data-name={{name}} data-id={{_id}}>
+                      <div class="pricebox">
+                        <p class="price"><img src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg"</p>
+                      </div>
+                      <div class="buybox">
+                        <p class="add-to-cart"> <ul>
+                            <li>Name:{{name}}</li>
+                            <li>Gender{{gender}}</li>
+                            <li>Breed{{breed}}</li>
+                            <li>Color{{color}}</li>
+                            <li>Size{{size}}</li>
+                            <li>Age{{age}}</li>
+                            <li>E-mail{{mail}}</li>
+                        </ul> </p>
+                      </div>
+                      <div class="card-inner">
+                        <img src="{{img}}" class="proimage">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <div class="pet" data-id="{{_id}}"> {{img}} {{gender}}
+            <button type="button" class="btn btn-danger remove-pet">Remove pet</button>
         </div>
     </script>
-    <script id="comment-template" type="text/x-handlebars-template">
-        <li class="comment">
-            <button type="button" class="btn btn-sm btn-danger remove-comment">Remove Comment</button>
-        </li>
-    </script>
+   
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="main.js" type="module"></script>

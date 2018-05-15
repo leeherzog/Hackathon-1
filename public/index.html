@@ -4,7 +4,7 @@
 <head>
     <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <title></title>
+    <title>Pet Lover</title>
 </head>
 
 <body>
@@ -12,17 +12,51 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+
                 <div class="page-header">
                     <h1>Pet Lover</h1>
                 </div>
+
                 <div class="pets"></div>
+
                 <form class="pet-form">
                     <h3>Add a New Pet</h3>
+
+
                     <div class="form-group">
-                        <!-- adding all input form -->
-                        <input class="form-control" type="text" id="petText" placeholder="Enter pet Text"/>
-                    </div>
-                    <button type="button" id="addpet" class="btn btn-primary">Add</button>
+                    
+
+                            <div class="form-group input-group mb">        
+                Name<input class="form-control" type="text" id="name" placeholder="Enter pet name" />
+            </div>
+                <!-- add radio btn -->
+                Gender<select class="form-control" type="text" id="gender" placeholder="Enter pet gender"/>
+                        <option value="female">female</option>
+                        <option value="male">male</option>
+                      </select>
+
+                <div class="form-group input-group mb"> 
+                Breed<input class="form-control" type="text" id="breed" placeholder="Enter pet breed"/>
+            </div>
+            <div class="form-group input-group mb"> 
+                Color<input class="form-control" type="text" id="color" placeholder="Enter pet color"/>
+            </div>
+        
+                Size<input class="form-control" type="number" id="size" placeholder="Enter pet size"/>
+            
+                <div class="form-group input-group mb"> 
+                Age<input class="form-control" type="number" id="age" placeholder="Enter pet age"/>
+            </div>
+            
+                Mail<input class="form-control" type="text" id="mail" placeholder="Enter pet mail"/>
+            
+    
+                Img<input class="form-control" type="number" id="img" placeholder="Enter pet img"/>
+            
+
+                    
+
+                <button type="button" id="addpet" class="btn btn-primary">Add</button>
                 </form>
             </div>
         </div>
@@ -30,7 +64,6 @@
     <script id="pet-template" type="text/x-handlebars-template">
         <!--create 3 div classes with col-md-4 (3 columns) (template for handlebars)
         Add form {{age, weight}}-->
-
         <div class="pet" data-id="{{_id}}"> {{text}} <a class="toggle-comments" href="#"> Comments </a>
             <button type="button" class="btn btn-danger remove-pet">Remove pet</button>
 

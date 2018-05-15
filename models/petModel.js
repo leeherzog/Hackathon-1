@@ -9,8 +9,9 @@ let petSchema = new mongoose.Schema({
     breed: String,
     color : String,
     size : String,
-    age : Number,
-    email :String , 
+    age : Number ,
+    mail :String , 
+    img : String
 });
 
 let Pet = mongoose.model('pets', petSchema)

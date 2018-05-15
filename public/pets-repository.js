@@ -25,7 +25,7 @@ class petsRepository {
               })
               .then ((pets)=>{
                 console.log(pets);
-                this.posts.push(pets);
+                this.pets.push(pets);
             })
             .catch (function error (jqXHR, textStatus, errorThrown) {
                 console.error(textStatus);

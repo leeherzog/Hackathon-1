@@ -12,8 +12,7 @@ class EventsHandler {
             // if ($input.val() === "") {
             //     alert("Please enter text!"); 
             // } else {
-                this.petsRepository.addPet(obj);
-                this.petsRenderer.renderPets(this.petsRepository.pets);
+                this.petsRepository.addPet(obj).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
             })
         }
             // });        

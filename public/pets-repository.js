@@ -1,70 +1,36 @@
-import api from './api.js';
-
-/**
-* @class Responsible for storing and manipulating Spacebook pets, in-memory
-*/
-
 class petsRepository {
-    constructor(api) {
+    constructor() {
         this.pets = [];
-        this.api = api;
     }
 
-    // async dataInit() {
-    //     try {
-    //     this.pets = await api.fetch()
-    //     }
-    //     catch (e) {
-    //         console.log('there was an error');
-    //         console.log(e);
-    //     }
-    // }
-
-    //my code
-    dataInit(){
-       return  api.fetch().then((data)=>{
+    fetch(data) {
+        return $.ajax({
+          method: "GET",
+          url:"/pets"
+        }) 
+        .then ((data)=>{
+            console.log(data);
             this.pets = data;
-         });
-    }
-
-    // addpet(petText) {
-    //     return  $.ajax({
-    //         method: "pet",
-    //         url: '/pets',
-    //         data: newpetText
-    //     }).then(()=>{
-    //         this.pets.push({ text: petText, comments: []})
-    //     });  
-    // }
-
-    async addPet(petText) {
-        try {
-            var newPetText = { text: petText };
-            let result = await $.ajax({
-                method: "post",
-                url: '/pets',
-                data: newPetText
-            });
-            this.dataInit();
-            this.pets.push(result);
+        })
+        .catch (function error (jqXHR, textStatus, errorThrown) {
+            console.error(textStatus);
+          });
         }
-        catch (e) {
-            console.log('there was an error');
-            console.log(e);
-        }
-    }
 
-    async removePet(id) {
-        console.log(id)
+        addPet(color, age) {
             return $.ajax({
-                method: "DELETE",
-                url: '/pets/' + id ,
+                method: "POST",
+                url: "/pets",
+                data: {color: color, age: age},
+              })
+              .then ((serverResult)=>{
+                console.log(serverResult);
+                this.posts.push(serverResult);
             })
-             this.dataInit();
-        
-       
-    }
-
+            .catch (function error (jqXHR, textStatus, errorThrown) {
+                console.error(textStatus);
+              });
+            }
  
 
 }

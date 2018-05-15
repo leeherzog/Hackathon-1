@@ -17,15 +17,15 @@ class petsRepository {
           });
         }
 
-        addPet(color, age) {
+        addPet(obj) {
             return $.ajax({
                 method: "POST",
                 url: "/pets",
-                data: {color: color, age: age},
+                data: obj,
               })
-              .then ((serverResult)=>{
-                console.log(serverResult);
-                this.posts.push(serverResult);
+              .then ((pets)=>{
+                console.log(pets);
+                this.posts.push(pets);
             })
             .catch (function error (jqXHR, textStatus, errorThrown) {
                 console.error(textStatus);

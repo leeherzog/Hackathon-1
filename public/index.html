@@ -8,55 +8,55 @@
 </head>
 
 <body>
+        <div class="pets"></div>
     
+
+<img src="http://vetdubai.com/wp-content/uploads/2011/12/adopt_pet_header.jpg" ></img>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
 
                 <div class="page-header">
-                    <h1>Pet Lover</h1>
-                </div>
-
-                <div class="pets">
-
-                    <h1>list</h1>
-
+                    <h1><img src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg" style="width: 20%"></img></h1>
                 </div>
 
                 <form class="pet-form">
-                    <h3>Add a New Pet</h3>
+                    <h3>New Pet for Adoption</h3>
 
 
                     <div class="form-group">
                     
-
-                            <div class="form-group input-group mb">        
-                Name<input class="form-control" type="text" id="name" placeholder="Enter pet name" />
+                                  <div class="col-md-4">
+                Name:<input class="form-control" style="width: 10em" type="text" id="name" placeholder="Enter pet name" /> 
+            
+            
+                Gender:<select class="form-control" style="width: 12em" type="text" id="gender" placeholder="Enter pet gender"/> 
+                <option disabled selected value>--select an option--</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select> 
+                    
+                    </div> 
+                    <div class="col-md-4">
+                Breed:<input class="form-control" style="width: 10em" type="text" id="breed" placeholder="Enter pet breed"/> 
+            
+         
+                Color:<input class="form-control" style="width: 10em" type="text" id="color" placeholder="Enter pet color"/> 
             </div>
-                <!-- add radio btn -->
-                Gender<select class="form-control" type="text" id="gender" placeholder="Enter pet gender"/>
-                        <option value="female">female</option>
-                        <option value="male">male</option>
-                      </select>
-
-                <div class="form-group input-group mb"> 
-                Breed<input class="form-control" type="text" id="breed" placeholder="Enter pet breed"/>
-            </div>
-            <div class="form-group input-group mb"> 
-                Color<input class="form-control" type="text" id="color" placeholder="Enter pet color"/>
+           <div class="col-md-4">
+                Size:<input class="form-control"  style="width: 10em" type="number" id="size" placeholder="Enter pet size"/> 
+           
+               
+                Age:<input class="form-control"  style="width: 10em" type="number" id="age" placeholder="Enter pet age"/> 
             </div>
         
-                Size<input class="form-control" type="number" id="size" placeholder="Enter pet size"/>
-            
-                <div class="form-group input-group mb"> 
-                Age<input class="form-control" type="number" id="age" placeholder="Enter pet age"/>
-            </div>
-            
-                Mail<input class="form-control" type="text" id="mail" placeholder="Enter pet mail"/>
+            <div class="container4">
+                E-mail:<input class="form-control" type="text" id="mail" placeholder="Enter pet mail"/>
             
     
-                Img<input class="form-control" type="number" id="img" placeholder="Enter pet img"/>
-            
+                Post an image of your pet:<input class="form-control" type="number" id="img" placeholder="Enter pet img"/>
+            </div>
 
                     
 
@@ -68,11 +68,17 @@
        <!--create 3 div classes with col-md-4 (3 columns) (template for handlebars)
         Add form  s-->
     <script id="pet-template" type="text/x-handlebars-template">
-     
-        <h1>ggg</h1>
-        <div class="pet" data-id="{{_id}}"> {{name}} {{gender}} <a href="#"> </a>         
+        <div class="pet" data-id="{{_id}}"> {{name}} {{gender}}
+            <button type="button" class="btn btn-danger remove-pet">Remove pet</button
+           
         </div>
     </script>
+    <script id="comment-template" type="text/x-handlebars-template">
+        <li class="comment">
+            <button type="button" class="btn btn-sm btn-danger remove-comment">Remove Comment</button>
+        </li>
+    </script>
+
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="main.js" type="module"></script>

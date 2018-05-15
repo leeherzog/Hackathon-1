@@ -7,7 +7,7 @@ class EventsHandler {
 
     registerAddPet() {
         $('#addpet').on('click', () => {
-            let obj = {name: $("#name").val(), gender: $("#gender").val()};
+            let obj = {name: $("#name").val(), gender: $("#gender").val(),breed: $("#breed").val(),color: $("#color").val(),size: $("#size").val(),age: $("#age").val(),mail: $("#mail").val(),img: $("#img").val(),addpet : "no"};
             // xxxx add validation that form is filled!
             // if ($input.val() === "") {
             //     alert("Please enter text!"); 
@@ -24,7 +24,7 @@ class EventsHandler {
 //             // i chenged the argument that wil sent for femove to be an id instad of index
 //             let id = $(event.currentTarget).closest('.pet').attr("data-id");
 //             console.log(id);
-//             this.petsRepository.removePet(id).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
+//             this.petsRepetsitory.removePet(id).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
 //             // this.petsRenderer.renderPets(this.petsRepository.pets);
 //           });
 

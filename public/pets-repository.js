@@ -3,14 +3,15 @@ class petsRepository {
         this.pets = [];
     }
 
-    fetch(data) {
+    fetch() {
         return $.ajax({
           method: "GET",
-          url:"/pets"
+          url:"/pet"
         }) 
         .then ((data)=>{
             console.log(data);
             this.pets = data;
+        
         })
         .catch (function error (jqXHR, textStatus, errorThrown) {
             console.error(textStatus);

@@ -17,7 +17,11 @@
                     <h1>Pet Lover</h1>
                 </div>
 
-                <div class="pets"></div>
+                <div class="pets">
+
+                    <h1>list</h1>
+
+                </div>
 
                 <form class="pet-form">
                     <h3>Add a New Pet</h3>
@@ -61,19 +65,13 @@
             </div>
         </div>
     </div>
+       <!--create 3 div classes with col-md-4 (3 columns) (template for handlebars)
+        Add form  s-->
     <script id="pet-template" type="text/x-handlebars-template">
-        <!--create 3 div classes with col-md-4 (3 columns) (template for handlebars)
-        Add form {{age, weight}}-->
-        <div class="pet" data-id="{{_id}}"> {{name}} {{gender}} <a class="toggle-comments" href="#"> Comments </a>
-            <button type="button" class="btn btn-danger remove-pet">Remove pet</button>
-
-           
+     
+        <h1>ggg</h1>
+        <div class="pet" data-id="{{_id}}"> {{name}} {{gender}} <a href="#"> </a>         
         </div>
-    </script>
-    <script id="comment-template" type="text/x-handlebars-template">
-        <li class="comment">{{text}} - {{user}}
-            <button type="button" class="btn btn-sm btn-danger remove-comment">Remove Comment</button>
-        </li>
     </script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>

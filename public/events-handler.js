@@ -49,7 +49,7 @@ class EventsHandler {
 
             // makes the form toggle
             registerToggleForm() {
-                $('.row').on('click','.toggle-comments', (event) => {
+                $('#addNewPet').on('click', (event) => {
                     $('.pet-form').toggleClass('show');
                   });
             }

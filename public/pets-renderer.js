@@ -19,7 +19,7 @@ class PetsRenderer {
         var template = Handlebars.compile(this.$petTemplate);
           var newHTML = template(pets[this.counter]);
           this.$pets.append(newHTML);
-          this.counter = this.counter + 1;
+          this.counter = this.counter+1;
           console.log(this.counter);
     }
     }

@@ -19,9 +19,10 @@ class EventsHandler {
             
             $('.pets').on('click',  '#like',() => {
                     console.log('like');
-                this.petsRenderer.renderPets(this.petsRepository.pets);  
+                
                 var id = $(".pets").find(".show-pet").attr("data-id");
                 this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite(this.favorites.favorites)});
+                this.petsRenderer.renderPets(this.petsRepository.pets);  
                 })
             }
             registerUnlikePet() {

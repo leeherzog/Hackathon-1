@@ -56,7 +56,7 @@ class EventsHandler {
 
             // makes the form toggle
             registerToggleForm() {
-                alert('working')
+               
 
                 $('#addNewPet').on('click', (event) => {
                     $('.pet-form').toggleClass('show');

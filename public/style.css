@@ -1,6 +1,7 @@
 *{
   box-sizing:border-box;
 }
+
 .post {
     padding: 20px 0;
 }
@@ -28,8 +29,8 @@ img{
 
 
 .proimage {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 
 .polaroid-images {
@@ -48,6 +49,7 @@ img{
     transition: all .15s linear;
     z-index:0;
      position:relative;
+    
 }
 
 .navbar {
@@ -81,3 +83,28 @@ display: inline-block;
     display: block;
 }
 
+.col-md-6{
+    display:inline-block;
+    text-align:center;
+    margin-right: 25% ; 
+    margin-left: 25% ;
+    border-style: solid;
+    border-color: blueviolet ; 
+    border-radius: 2cm ;  
+}
+
+h1{
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    color:blueviolet ; 
+    font-weight: bold;
+}
+
+.col-lg-12{
+    float: left ; 
+}
+.row btnRow{
+    display:inline-block;
+    text-align:center;
+    margin-right: 25% ; 
+    margin-left: 25% ;
+}

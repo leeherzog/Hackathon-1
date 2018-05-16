@@ -8,15 +8,47 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <!-- realcode -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
     <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <title>Pet Lover</title>
 </head>
 
 <body>
+
     <div class="page-header">
         <img src="http://vetdubai.com/wp-content/uploads/2011/12/adopt_pet_header.jpg" ></img>
     </div>
+
+        
+    
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SHOPPING CART</a>
+                  </div>
+             
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                        <a href="#" class="view-cart" data-toggle="dropdown" role="button">Shopping Cart <i class="fa fa-shopping-cart"></i></a>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+              
+<img src="http://vetdubai.com/wp-content/uploads/2011/12/adopt_pet_header.jpg" style="width: 100%" ></img>
 
     <div class="pets">
         
@@ -58,6 +90,40 @@
                                         E-mail:<input class="form-control" type="text" id="mail" placeholder="Enter pet mail"/>
                                         Post an image of your pet:<input class="form-control" type="url" id="img" placeholder="Enter pet img"/>
                                   </div>
+
+                    <div class="form-group">
+                    
+                                  <div class="col-md-4">
+                Name:<input class="form-control" style="width: 10em" type="text" id="name" placeholder="Enter pet name" /> 
+            
+            
+                Gender:<select class="form-control" style="width: 12em" type="text" id="gender" placeholder="Enter pet gender"/> 
+                <option disabled selected value>--select an option--</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select> 
+                    
+                    </div> 
+                    <div class="col-md-4">
+                Breed:<input class="form-control" style="width: 10em" type="text" id="breed" placeholder="Enter pet breed"/> 
+            
+         
+                Color:<input class="form-control" style="width: 10em" type="text" id="color" placeholder="Enter pet color"/> 
+            </div>
+           <div class="col-md-4">
+                Size:<input class="form-control"  style="width: 10em" type="number" id="size" placeholder="Enter pet size"/> 
+           
+               
+                Age:<input class="form-control"  style="width: 10em" type="number" id="age" placeholder="Enter pet age"/> 
+            </div>
+        
+            <div class="container4">
+                E-mail:<input class="form-control" type="email" id="mail" placeholder="Enter pet mail"/>
+            
+    
+                Post an image of your pet:<input class="form-control" type="url" id="img" placeholder="Enter pet img"/>
+            </div>
+
 
                                   <!-- adding upload -->
                                   <div class=" upload-container">

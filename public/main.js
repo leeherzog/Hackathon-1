@@ -17,10 +17,11 @@ petsRepository.fetch().then(()=>{
 
 // petsRenderer.renderPets(petsRepository.pets)
 
-eventsHandler.registerAddPet();
-// eventsHandler.registerRemovePet();
 eventsHandler.registerLikePet();
 eventsHandler.registerUnlikePet();
+eventsHandler.registerAddPet();
+// eventsHandler.registerRemovePet();
+
 eventsHandler.registerToggleForm();
 
 $('.pet-form').on('click', function(e) {e.preventDefault(); return true;});

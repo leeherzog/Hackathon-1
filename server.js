@@ -93,6 +93,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // You will need to create 5 server routes
 // These will define your API:
 
+
+
+
+
 // 1) to handle getting all pets and their comments
 app.get('/pet', function (req, res) {
   Pet.find().exec(function(err, pets){
@@ -123,14 +127,17 @@ app.post('/pets', (req, res) => {
 
 
 // 3) to handle deleting a pet
-app.delete(`/pets/:id`, (req, res) => {
+app.get('/likes/:id', (req, res) => {
+  console.log("working!");
   var id = req.params.id;
-  // console.log(id)
-  Pet.findByIdAndRemove(id).exec((err, pet) => {
+  console.log(id)
+  Pet.findOne({_id: id}).exec((err, pet) => {
       if (err) {
           console.log(err)
       } else {
-          console.log('ERMOVED   :'+pet)
+        console.log(pet)
+        res.send(pet);
+        console.log("we got here")
       }
   })
 });

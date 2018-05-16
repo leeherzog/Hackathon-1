@@ -1,7 +1,6 @@
 class petsRepository {
     constructor() {
         this.pets = [];
-        this.counter = 0;
     }
 
     fetch() {

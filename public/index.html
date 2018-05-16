@@ -28,6 +28,9 @@
                     <li class="dropdown">
                         <a href="#" class="view-favorites" data-toggle="dropdown" role="button">Favorites
                             <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="favorites">
+
+                                </div>
                     </li>
                 </ul>
             </div>
@@ -38,12 +41,18 @@
 
     <img src="http://vetdubai.com/wp-content/uploads/2011/12/adopt_pet_header.jpg" style="width: 100%"></img>
 
+
+
     <div class="pets">
     </div>
 
 
     <div class="col-md-offset-5">
+<<<<<<< HEAD
         <button class="toggle-comments purple darken-4" id="addNewPet" > Add a new Pet for Adoption
+=======
+        <button class="toggle-comments purple darken-4" id="addNewPet" href="# "> Add a new Pet for Adoption
+>>>>>>> 70866fa513af0c73e7ad3f63477da2dd5e114a23
             <i class="fas fa-upload "></i>
         </button>
     </div>
@@ -109,10 +118,11 @@
 
     <script id="pet-template" type="text/x-handlebars-template">
         <div class="row ">
-                 <div class = "show-pet" data-id="{{_id}}" >
+                 <div class="show-pet" data-id="{{_id}}">
                     <div class="col-md-6">
                                     <div class="col-lg-12">
                                             <h1>{{name}}</h1>
+<<<<<<< HEAD
                                         <img src="{{img}}" class=" polaroid-images proimage rounded md-auto d-block" alt=" ">
                                         <div class="row btnRow">
                                                 <div class="col-xs-4">
@@ -138,11 +148,70 @@
                                                     </ul> 
                                             </p>
                                     </div>
+=======
+                                            
+                                        <img src="{{img}}" class=" polaroid-images proimage rounded md-auto d-block" alt=" ">
+                                        <div class="row btnRow">
+                                                <div class="col-xs-4">
+
+                                                        <button type="button"  id = "unlike" class="btn btn-danger"><i class="fas fa-times"></i></button>
+
+                                                </div>
+
+                                                <div class="col-xs-4 adopt">
+
+                                                   <a href="mailto:{{mail}}?Subject=addtpet"><img id = "adopt" type="button" src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg" style="width: 40%"></img></a>
+
+                                                </div>
+
+                                                
+
+                                                <div class="col-xs-4">
+
+                                                        <button type="button" id = "like" class="btn btn-success"><i class="fas fa-heart"></i></button>
+
+                                                </div>
+                                        </div>
+                                   </div>
+                                   <div class="info-container">
+
+                                        <p class="list">
+
+                                                <ul class="order">
+
+                                                    <li>Name: {{name}}</li><li>Gender: {{gender}}</li>
+
+                                                    <li>Breed: {{breed}}</li><li>Color: {{color}}</li>
+
+                                                    <li>Size: {{size}}</li><li>Age: {{age}}</li>
+
+                                                  
+
+                                                   
+
+                                                </ul> 
+
+                                        </p>
+
+                                </div>
+>>>>>>> 70866fa513af0c73e7ad3f63477da2dd5e114a23
                         </div>  
                     </div> 
                  </div>
         </div>
     </script>
+
+    <script id="favorites-template" type="text/x-handlebars-template">
+       
+        <ul>
+          <li>{{name}}
+              <br>
+                <img src="{{img}}" class="mini polaroid-images proimage rounded md-auto d-block" alt=" ">
+          </li>
+        </ul>
+
+      </script>
+
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
 

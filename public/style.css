@@ -74,8 +74,11 @@ display: inline-block;
      border-radius: 24px;
      font-family: 'Raleway', Helvetica, Arial, sans-serif;
      color:white  ; 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 70866fa513af0c73e7ad3f63477da2dd5e114a23
 }
 
 .pet-form {
@@ -88,6 +91,7 @@ display: inline-block;
 }
 
 .col-md-6{
+<<<<<<< HEAD
     display:inline-block;
     text-align:center;
     margin-right: 25% ; 
@@ -130,3 +134,94 @@ h1{
     display: table-cell;
     float: none ; 
   }
+=======
+
+    display:inline-block;
+
+    text-align:center;
+
+    margin-right: 25% ; 
+
+    margin-left: 25% ;
+
+    border-style: solid;
+
+    border-color: blueviolet ; 
+
+    border-radius: 2cm ;  
+
+}
+
+
+
+h1{
+
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+    color:blueviolet ; 
+
+    font-weight: bold;
+
+}
+
+
+
+.col-lg-12{
+
+    float: left ; 
+
+}
+
+.row btnRow{
+
+    display:inline-block;
+
+    text-align:center;
+
+    margin-right: 25% ; 
+
+    margin-left: 25% ;
+
+}
+
+
+
+.info-container{
+
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+    color:blueviolet ; 
+
+    text-align: center;
+
+}
+
+
+
+.order {
+
+    display: table;
+
+    width: 100%;
+
+    text-align: center;
+
+   
+
+  }
+
+  
+
+  ul.order > li {
+
+    display: table-cell;
+
+    float: none ; 
+
+  }
+
+  .mini {
+      border-radius:50%;
+      height:2%;
+  }
+>>>>>>> 70866fa513af0c73e7ad3f63477da2dd5e114a23

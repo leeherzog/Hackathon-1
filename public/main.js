@@ -21,4 +21,6 @@ eventsHandler.registerLikePet();
 eventsHandler.registerUnlikePet();
 eventsHandler.registerToggleForm();
 
+$('.pet-form').on('click', function(e) {e.preventDefault(); return true;});
+
 

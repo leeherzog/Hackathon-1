@@ -51,13 +51,11 @@ class EventsHandler {
 
             // makes the form toggle
             registerToggleForm() {
-<<<<<<< HEAD
                
 
-=======
->>>>>>> 70866fa513af0c73e7ad3f63477da2dd5e114a23
                 $('#addNewPet').on('click', (event) => {
                     $('.pet-form').toggleClass('show');
+                    event.preventDefault();
                   });
             }
             

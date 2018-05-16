@@ -25,5 +25,6 @@ eventsHandler.registerAddPet();
 eventsHandler.registerToggleForm();
 
 $('.pet-form').on('click', function(e) {e.preventDefault(); return true;});
+$('.show-pet').on('click', function(e) {e.preventDefault(); return true;});
 
 

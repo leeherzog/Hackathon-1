@@ -38,6 +38,10 @@
 
     <img src="http://vetdubai.com/wp-content/uploads/2011/12/adopt_pet_header.jpg" style="width: 100%"></img>
 
+<div class="favorites">
+
+</div>
+
     <div class="pets">
     </div>
 
@@ -109,12 +113,11 @@
 
     <script id="pet-template" type="text/x-handlebars-template">
         <div class="row ">
-                 <div class = "show-pet" data-id="{{_id}}" >
+                 <div class="show-pet" data-id="{{_id}}">
                     <div class="col-md-6">
                                     <div class="col-lg-12">
-                                        <h1>test below</h1>
                                             <h1>{{name}}</h1>
-                                            <h1>test above name</h1>
+                                            
                                         <img src="{{img}}" class=" polaroid-images proimage rounded md-auto d-block" alt=" ">
                                         <div class="row btnRow">
                                                 <div class="col-xs-2">
@@ -146,6 +149,15 @@
                  </div>
         </div>
     </script>
+
+    <script id="favorites-template" type="text/x-handlebars-template">
+       
+        <ul>
+          <li>{{name}}{{img}}</li>
+        </ul>
+
+      </script>
+
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
 

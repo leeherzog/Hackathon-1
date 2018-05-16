@@ -5,18 +5,23 @@ class PetsRenderer {
     constructor() {
         this.$pets = $(".pets");
         this.$petTemplate = $('#pet-template').html();
+        this.counter = 0;
        // this.$commentTemplate = $('#comment-template').html();
     }
     renderPets(pets) {
-        
+        if (pets.length == 0 || this.counter>pets.length){
+            this.$pets.empty();
+            this.counter = 0;
+           return console.log("empty array")
+        }
+        else {
         this.$pets.empty();
         var template = Handlebars.compile(this.$petTemplate);
-        for (var i = 0; i < pets.length; i++) {
-          var newHTML = template(pets[i]);
-         // console.log(newHTML);
+          var newHTML = template(pets[this.counter]);
           this.$pets.append(newHTML);
-         // this.renderComments(pets, i);
-        }
+          this.counter = this.counter + 1;
+          console.log(this.counter);
+    }
     }
 }
 

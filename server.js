@@ -3,9 +3,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Pet = require('./models/petModel');
  mongoose.Promise = require('bluebird');
-const multer = require('multer');
-const ejs = require('ejs');
-const path = require('path');
+// const multer = require('multer');
+// const ejs = require('ejs');
+// const path = require('path');
 
 const SERVER_PORT = 8080;
 
@@ -21,67 +21,67 @@ app.use(express.static('node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-///muler adding
-// Set The Storage Engine
-const storage = multer.diskStorage({
-  destination: './public/uploads/',
-  filename: function(req, file, cb){
-    cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  }
-});
+// ///muler adding
+// // Set The Storage Engine
+// const storage = multer.diskStorage({
+//   destination: './public/uploads/',
+//   filename: function(req, file, cb){
+//     cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+//   }
+// });
 
-// Init Upload
-const upload = multer({
-  storage: storage,
-  limits:{fileSize: 1000000},
-  fileFilter: function(req, file, cb){
-    checkFileType(file, cb);
-  }
-}).single('myImage');
+// // Init Upload
+// const upload = multer({
+//   storage: storage,
+//   limits:{fileSize: 1000000},
+//   fileFilter: function(req, file, cb){
+//     checkFileType(file, cb);
+//   }
+// }).single('myImage');
 
-// Check File Type
-function checkFileType(file, cb){
-  // Allowed ext
-  const filetypes = /jpeg|jpg|png|gif/;
-  // Check ext
-  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-  // Check mime
-  const mimetype = filetypes.test(file.mimetype);
+// // Check File Type
+// function checkFileType(file, cb){
+//   // Allowed ext
+//   const filetypes = /jpeg|jpg|png|gif/;
+//   // Check ext
+//   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+//   // Check mime
+//   const mimetype = filetypes.test(file.mimetype);
 
-  if(mimetype && extname){
-    return cb(null,true);
-  } else {
-    cb('Error: Images Only!');
-  }
-}
-
-
-// // EJS
-// app.set('view engine', 'ejs');
+//   if(mimetype && extname){
+//     return cb(null,true);
+//   } else {
+//     cb('Error: Images Only!');
+//   }
+// }
 
 
-// app.get('/', (req, res) => res.render('index'));
+// // // EJS
+// // app.set('view engine', 'ejs');
 
-app.post('/upload', (req, res) => {
-  upload(req, res, (err) => {
-    if(err){
-      res.render('index', {
-        msg: err
-      });
-    } else {
-      if(req.file == undefined){
-        res.render('index', {
-          msg: 'Error: No File Selected!'
-        });
-      } else {
-        res.render('index', {
-          msg: 'File Uploaded!',
-          file: `uploads/${req.file.filename}`
-        });
-      }
-    }
-  });
-});
+
+// // app.get('/', (req, res) => res.render('index'));
+
+// app.post('/upload', (req, res) => {
+//   upload(req, res, (err) => {
+//     if(err){
+//       res.render('index', {
+//         msg: err
+//       });
+//     } else {
+//       if(req.file == undefined){
+//         res.render('index', {
+//           msg: 'Error: No File Selected!'
+//         });
+//       } else {
+//         res.render('index', {
+//           msg: 'File Uploaded!',
+//           file: `uploads/${req.file.filename}`
+//         });
+//       }
+//     }
+//   });
+// });
 
 
 //init data

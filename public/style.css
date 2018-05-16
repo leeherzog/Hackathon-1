@@ -101,3 +101,21 @@ img{
     z-index:0;
      position:relative;
 }
+
+.navbar {
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
+display: inline-block;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 45px;
+    position: absolute; 
+    /* width: 100px; */
+    left: 15%;
+    text-align: center;
+}
+
+.formFillOut {
+    color: white;
+}

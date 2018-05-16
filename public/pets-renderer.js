@@ -11,18 +11,12 @@ class PetsRenderer {
         console.log('inside of the renderpets func 2')
         this.$pets.empty();
         var template = Handlebars.compile(this.$petTemplate);
-        
-        for (var i = 0; i < pets.length; i++) {
-            console.log('before')
-            console.log(typeof pets[i])
-          var newHTML = template(pets[i]);
-
-         
+        //for (var i = 0; i < pets.length; i++) {
+          var newHTML = template(pets);
          // console.log(newHTML);
           this.$pets.append(newHTML);
-          console.log('after')
          // this.renderComments(pets, i);
-        }
+        //}
     }
 }
 

@@ -3,6 +3,7 @@ class EventsHandler {
         this.petsRepository = petsRepository;
         this.petsRenderer = petsRenderer;
         this.$pets = $(".pets");
+        this.$addaptForm =$(".pet-form")
     }
 
     registerAddPet() {
@@ -15,9 +16,44 @@ class EventsHandler {
                 this.petsRepository.addPet(obj).then(()=>{this.petsRenderer.renderPets(this.petsRepository.pets)});
             })
         }
-            // });        
-    // }
+       
 
+        registerLikePet() {
+            $('.pets').on('click',  '#like',() => {
+                    console.log('like');
+                //function add to favorit
+
+                //function show next
+                this.petsRenderer.renderPets(this.petsRepository.pets[this.petsRepository.counter])  
+                this.petsRepository.counter++;
+                })
+            }
+            registerUnlikePet() {
+                $('.pets').on('click','#unlike', () => {
+                    console.log('unlike');
+                    //function do not show
+
+                    //function show next
+                    this.petsRenderer.renderPets(this.petsRepository.pets[this.petsRepository.counter])  
+                    this.petsRepository.counter++;
+                    })
+                } 
+                
+                registerAdopt() {
+                    $('.pets').on('click','#adopt', () => {
+                        console.log('adopted');
+                        //function send a mail to the person + tag as adopted
+    
+                        })
+                    }
+
+            // makes the form toggle
+            registerToggleForm() {
+                $('.row').on('click','.toggle-comments', (event) => {
+                    $('.pet-form').toggleClass('show');
+                  });
+            }
+            
 }
 
 export default EventsHandler

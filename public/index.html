@@ -42,104 +42,94 @@
     </div>
 
 
-    <div class="adoptBtn col-md-offset-5" ">
-        <button class="toggle-comments " id="addNewPet " href="# "> Add a new Pet for Adoption
+    <div class="col-md-offset-5">
+        <button class="toggle-comments" id="addNewPet" href="# "> Add a new Pet for Adoption
             <i class="fas fa-upload "></i>
         </button>
     </div>
 
 
+    <!-- this needs to appear or disapear-->
+    <div class="container form-container form-group pet-form">
+        <div class="row purple darken-4">
+            <form>
+                <div class="form-container formFillOut">
+                    <div class="col-md-4">
+                        Name:
+                        <input class="form-control" style="width: 10em" type="text " id="name" placeholder="Enter pet name" /> 
+                        Gender:
+                        <select class="form-control" style="width: 12em" type="text " id="gender" placeholder="Enter pet gender" />
+                        <option disabled selected value>--select an option--</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        </select>
 
-        <div class="container pet-form ">
-            
-            <div class="row purple darken-4 ">
-                    <form>
-                        <div class="form-container formFillOut ">
-                            <div class="form-group col-md-4 ">
-                                Name:
-                                <input class="form-control " style="width: 10em " type="text " id="name " placeholder="Enter
-        pet name "
-                                /> Gender:
-
-
-                                <select class="form-control " style="width: 12em " type="text " id="gender
-        " placeholder="Enter pet gender " />
-                                <option disabled selected value>--select an option--</option>
-                                <option value="female ">Female</option>
-                                <option value="male ">Male</option>
-                                </select>
-
-                            </div>
-                            <div class="col-md-4 ">
-                                Breed:
-                                <input class="form-control " style="width: 10em " type="text " id="breed
-        " placeholder="Enter pet breed " /> 
-                                Color:
-                                <input class="form-control " style="width: 10em " type="text " id="color
-        " placeholder="Enter pet color " />
-                            </div>
-                            <div class="col-md-4 ">
-                                Size:
-                                <select class="form-control " style="width: 12em " type="text " id="size
-        " placeholder="Enter pet size " />
+                    </div>
+                    <div class="col-md-4">
+                        Breed:
+                        <input class="form-control" style="width: 10em" type="text" id="breed" placeholder="Enter pet breed" /> 
+                        Color:
+                        <input class="form-control" style="width: 10em" type="text" id="color" placeholder="Enter pet color" />
+                    </div>
+                    <div class="col-md-4">
+                        Size:
+                        <select class="form-control" style="width: 12em;" type="text" id="size" placeholder="Enter pet size" />
 
 
-                                <option disabled selected value>--select an option--</option>
+                        <option disabled selected value>--select an option--</option>
 
-                                <option value="small ">Small</option>
-
-
-                                <option value="medium ">Medium</option>
+                        <option value="small">Small</option>
 
 
-                                <option value="Large ">Large</option>
+                        <option value="medium">Medium</option>
 
 
-                                </select>
+                        <option value="Large">Large</option>
 
-                                Age:
-                                <input class="form-control " style="width: 10em " type="number " id="age
-        " placeholder="Enter pet age " />
-                            </div>
 
-                            <div class="container4 ">
-                                E-mail:<input class="form-control " type="email " id="mail " placeholder="Enter your e-mail
-        address "/> 
-                                Post an image of your pet:
-                                <input class="form-control " type="url " id="img " placeholder="Enter pet img "
-                                />
-                            </div>
-                            <button type="button " id="addpet " class="btn btn-primary ">Add</button>
-                        </div>
-                    </form>
-            </div>
+                        </select>
+
+                        Age:
+                        <input class="form-control" style="width: 10em" type="number" id="age" placeholder="Enter pet age " />
+                    </div>
+
+                    <div class="container4">
+                        E-mail:
+                        <input class="form-control" type="email " id="mail" placeholder="Enter your e-mail address"
+                        /> Post an image of your pet:
+                        <input class="form-control" type="url " id="img" placeholder="Enter pet img" />
+                    </div>
+                    <button type="button" id="addpet" class="btn btn-primary">Add</button>
+                </div>
+            </form>
         </div>
-        
+    </div>
 
 
 
-            <script id="pet-template " type="text/x-handlebars-template ">
+    <script id="pet-template" type="text/x-handlebars-template">
         <div class="row ">
-                 <div class = "show-pet " data-id = {{_id}} >
-                    <div class="col-md-6 ">
-                                    <div class="col-lg-12 ">
+                 <div class = "show-pet" data-id="{{_id}}" >
+                    <div class="col-md-6">
+                                    <div class="col-lg-12">
+                                        <h1>test below</h1>
                                             <h1>{{name}}</h1>
-                                        <img src="{{img}} " class=" polaroid-images proimage rounded md-auto d-block
-        " alt=" ">
-                                        <div class="row btnRow ">
-                                                <div class="col-xs-2 ">
-                                                        <button type="button " id = "like " class="btn btn-success ">like</button>
+                                            <h1>test above name</h1>
+                                        <img src="{{img}}" class=" polaroid-images proimage rounded md-auto d-block" alt=" ">
+                                        <div class="row btnRow">
+                                                <div class="col-xs-2">
+                                                        <button type="button" id = "like" class="btn btn-success">like</button>
                                                 </div>
-                                                <div class="col-xs-2 adopt ">
-                                                        <button  id = "adopt ">  <img src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg "></img></button>
+                                                <div class="col-xs-2 adopt">
+                                                        <button  id = "adopt">  <img src="http://2.bp.blogspot.com/-5n8cMJ0PS5s/VkjQzj3Rt-I/AAAAAAAAJDE/wqWIgq42hSU/s1600-r/adopt.jpg"></img></button>
                                                 </div>
-                                                <div class="col-xs-2 ">
-                                                        <button type="button "  id = "unlike " class="btn btn-danger ">unlike</button>
+                                                <div class="col-xs-2">
+                                                        <button type="button"  id = "unlike" class="btn btn-danger">unlike</button>
                                                 </div>
                                         </div>
                                    </div>
-                                    <div class="info-container ">
-                                            <p class="list ">
+                                    <div class="info-container">
+                                            <p class="list">
                                                     <ul>
                                                         <li>Name: {{name}}</li>
                                                         <li>Gender: {{gender}}</li>
@@ -156,14 +146,14 @@
                  </div>
         </div>
     </script>
-            <script src="jquery/dist/jquery.js "></script>
-            <script src="handlebars/dist/handlebars.js "></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
 
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                crossorigin=" anonymous "></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
 
-            <script src="main.js " type="module "></script>
+    <script src="main.js" type="module"></script>
+
 </body>
 
 </html>

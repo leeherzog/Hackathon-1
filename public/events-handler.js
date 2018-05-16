@@ -8,6 +8,8 @@ class EventsHandler {
 
     registerAddPet() {
         $('#addpet').on('click', () => {
+            
+
             let obj = {name: $("#name").val(), gender: $("#gender").val(),breed: $("#breed").val(),color: $("#color").val(),size: $("#size").val(),age: $("#age").val(),mail: $("#mail").val(),img: $("#img").val(),addpet : "no"};
             // xxxx add validation that form is filled!
             // if ($input.val() === "") {
@@ -19,6 +21,7 @@ class EventsHandler {
        
 
         registerLikePet() {
+            
             $('.pets').on('click',  '#like',() => {
                     console.log('like');
                 //function add to favorit
@@ -29,6 +32,8 @@ class EventsHandler {
                 })
             }
             registerUnlikePet() {
+                
+
                 $('.pets').on('click','#unlike', () => {
                     console.log('unlike');
                     //function do not show
@@ -40,6 +45,8 @@ class EventsHandler {
                 } 
                 
                 registerAdopt() {
+                    
+
                     $('.pets').on('click','#adopt', () => {
                         console.log('adopted');
                         //function send a mail to the person + tag as adopted
@@ -49,6 +56,8 @@ class EventsHandler {
 
             // makes the form toggle
             registerToggleForm() {
+                alert('working')
+
                 $('#addNewPet').on('click', (event) => {
                     $('.pet-form').toggleClass('show');
                   });

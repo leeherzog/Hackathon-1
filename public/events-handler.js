@@ -38,7 +38,7 @@ class EventsHandler {
 
                     //function show next
                     // this.petsRepository.counter++;
-                    setTimeout(()=>{ this.petsRenderer.renderPets(this.petsRepository.pets) }, 1000);
+                    setTimeout(()=>{ this.petsRenderer.renderPets(this.petsRepository.pets) }, 500);
                     
                    
                     })
@@ -68,7 +68,7 @@ class EventsHandler {
             registerTogglfavorites() {
                 $('.view-favorites').on('click', (event) => {
                     $('.view-favorites').unbind("mouseenter mouseleave");
-                    $('.favorites').toggleClass('hide');
+                    $('.favorites').toggleClass('appear');
                     event.preventDefault();
                   });
             }

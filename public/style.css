@@ -153,11 +153,7 @@ h2{
     color:blueviolet ; 
     font-weight: bold;
 }
-.hide   {
-    display: none;
-    overflow-y: scroll ; 
-    
-}
+
 
 .font{
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
@@ -165,8 +161,14 @@ h2{
 }
 
 .favorites{
-  
+ 
 overflow-y: scroll;
-height: 349px;
+
+display: none ; 
+}
+
+.appear{
+    display: block;
+    height: 349px;
 }
 

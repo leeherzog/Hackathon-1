@@ -1,6 +1,7 @@
 *{
   box-sizing:border-box;
 }
+
 .post {
     padding: 20px 0;
 }
@@ -28,8 +29,8 @@ img{
 
 
 .proimage {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 
 .polaroid-images {
@@ -48,13 +49,26 @@ img{
     transition: all .15s linear;
     z-index:0;
      position:relative;
+    
 }
 
 .navbar {
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
 display: inline-block;
     text-align: center;
+    background-color: initial ; 
 }
+    .navbar a:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+    #bs-example-navbar-collapse-1 :hover {
+        background-color: transparent;
+        color: white;
+    }
+  
+
 
 .navbar-brand {
     font-size: 45px;
@@ -72,6 +86,8 @@ display: inline-block;
      border-radius: 24px;
      font-family: 'Raleway', Helvetica, Arial, sans-serif;
      color:white  ; 
+
+
 }
 
 .pet-form {
@@ -84,92 +100,51 @@ display: inline-block;
 }
 
 .col-md-6{
-
     display:inline-block;
-
     text-align:center;
-
     margin-right: 25% ; 
-
     margin-left: 25% ;
-
     border-style: solid;
-
     border-color: blueviolet ; 
-
     border-radius: 2cm ;  
-
 }
-
-
 
 h1{
-
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
-
     color:blueviolet ; 
-
     font-weight: bold;
-
 }
-
-
 
 .col-lg-12{
-
     float: left ; 
-
 }
-
 .row btnRow{
-
     display:inline-block;
-
     text-align:center;
-
     margin-right: 25% ; 
-
     margin-left: 25% ;
-
 }
-
-
 
 .info-container{
-
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
-
     color:blueviolet ; 
-
     text-align: center;
-
 }
 
-
-
 .order {
-
     display: table;
-
     width: 100%;
-
     text-align: center;
 
-   
-
   }
-
-  
 
   ul.order > li {
-
     display: table-cell;
-
     float: none ; 
-
   }
 
-  .mini {
-      border-radius:50%;
-      height:2%;
+  #addpet{
+      background: none ; 
+      border: none ; 
   }
+

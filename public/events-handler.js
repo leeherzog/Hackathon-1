@@ -22,20 +22,21 @@ class EventsHandler {
                 
                 var id = $(".pets").find(".show-pet").attr("data-id");
                 this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite(this.favorites.favorites)});
-                this.petsRenderer.renderPets(this.petsRepository.pets);  
+                this.petsRenderer.renderPets(this.petsRepository.pets); 
+               
                 })
             }
             registerUnlikePet() {
-                
 
                 $('.pets').on('click','#unlike', () => {
+                    $(this).addClass('magictime bombleftOut');
                     console.log('unlike');
                     //function do not show
 
                     //function show next
                     // this.petsRepository.counter++;
                     this.petsRenderer.renderPets(this.petsRepository.pets)  
-                    
+                   
                     })
                 } 
                 
@@ -49,10 +50,15 @@ class EventsHandler {
                         })
                     }
 
+                   
+                
             // makes the form toggle
             registerToggleForm() {
+               
+
                 $('#addNewPet').on('click', (event) => {
                     $('.pet-form').toggleClass('show');
+                    event.preventDefault();
                   });
             }
             

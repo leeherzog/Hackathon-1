@@ -11,10 +11,10 @@ class Favorites {
           url:"/likes/"+id
         }) 
         .then((pet)=>{
-            console.log("whats going on");
-            console.log(pet);
+            
+            // console.log(pet);
             this.favArray.push(pet);
-            console.log(this.favorites);
+            // console.log(this.favArray);
         })
         .catch (function error (jqXHR, textStatus, errorThrown) {
             console.error(textStatus);
@@ -27,6 +27,7 @@ class Favorites {
         for (var i =0; i < this.favArray.length; i++){
           var newHTML = template(this.favArray[i]);
           this.$fav.append(newHTML);
+        //   console.log("fav added");
         }
     }
     }

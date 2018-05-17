@@ -28,7 +28,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="view-favorites" data-toggle="dropdown" role="button">
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <p class="font">Favorites<br><i class="fa fa-star" aria-hidden="true"></i></p> 
                             <div class="favorites">
 
                                 </div>
@@ -139,9 +139,9 @@
                                     <div class="info-container">
                                             <p class="list">
                                                     <ul class="order">
-                                                        <li>Name: {{name}}</li><li>Gender: {{gender}}</li>
-                                                        <li>Breed: {{breed}}</li><li>Color: {{color}}</li>
-                                                        <li>Size: {{size}}</li><li>Age: {{age}}</li>
+                                                        <li><b>Gender:</b>{{gender}}</li>
+                                                        <li><b>Breed:</b> {{breed}}</li><li> <b>Color:</b>{{color}}</li>
+                                                        <li><b>Size:</b> {{size}}</li><li><b>Age:</b> {{age}}</li>
                                                       
                                                        
                                                     </ul> 
@@ -156,7 +156,7 @@
     <script id="favorites-template" type="text/x-handlebars-template">
        
         <ul>
-          <li>{{name}}
+          <li><h2>{{name}}</h2>
               <br>
                 <img src="{{img}}" class="mini polaroid-images proimage rounded md-auto d-block" alt=" ">
           </li>

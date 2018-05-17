@@ -21,6 +21,7 @@ class PetsRenderer {
           this.$pets.append(newHTML);
           this.counter = this.counter+1;
           console.log(this.counter);
+          console.log(pets.length);
     }
     }
 }

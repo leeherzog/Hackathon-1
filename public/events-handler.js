@@ -19,24 +19,27 @@ class EventsHandler {
             
             $('.pets').on('click',  '#like',() => {
                     console.log('like');
+                    $(".fly").addClass('magictime bombRightOut');
                     event.preventDefault();
                 var id = $(".pets").find(".show-pet").attr("data-id");
-                this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite()});
-                this.petsRenderer.renderPets(this.petsRepository.pets); 
+                setTimeout(()=>{this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite()})}, 1000);
+                
+                setTimeout(()=>{ this.petsRenderer.renderPets(this.petsRepository.pets) }, 1000); 
                
                 })
             }
             registerUnlikePet() {
 
                 $('.pets').on('click','#unlike', () => {
-                    $('#unlike').addClass('magictime bombleftOut');
+                    $(".fly").addClass('magictime bombLeftOut');
                     console.log('unlike');
                     event.preventDefault();
                     //function do not show
 
                     //function show next
                     // this.petsRepository.counter++;
-                    this.petsRenderer.renderPets(this.petsRepository.pets)  
+                    setTimeout(()=>{ this.petsRenderer.renderPets(this.petsRepository.pets) }, 1000);
+                    
                    
                     })
                 } 

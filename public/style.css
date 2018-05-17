@@ -155,9 +155,18 @@ h2{
 }
 .hide   {
     display: none;
+    overflow-y: scroll ; 
+    
 }
 
 .font{
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     font-size: 30px;
+}
+
+.favorites{
+  
+
+overflow-y: scroll;
+height: 349px;
 }

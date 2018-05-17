@@ -9,7 +9,7 @@ class PetsRenderer {
        // this.$commentTemplate = $('#comment-template').html();
     }
     renderPets(pets) {
-        if (pets.length == 0 || this.counter>pets.length){
+        if (pets.length == 0 || this.counter == pets.length){
             this.$pets.empty();
             this.counter = 0;
            return console.log("empty array")
@@ -21,6 +21,7 @@ class PetsRenderer {
           this.$pets.append(newHTML);
           this.counter = this.counter+1;
           console.log(this.counter);
+          console.log(pets.length);
     }
     }
 }

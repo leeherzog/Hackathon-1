@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar purple darken-4 navbar-fixed-top">
-        <div class="container-fluid">
+        <!-- <div class="container-fluid"> -->
             <div class="navbar-header">
                 <a class="navbar-brand">Welcome to the Animal Kingdom</a>
             </div>
@@ -27,8 +27,8 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="view-favorites" data-toggle="dropdown" role="button">
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                        <a href="#" class="tog view-favorites" data-toggle="dropdown" role="button">
+                            <p class="font">Favorites<br><i class="fa fa-star" aria-hidden="true"></i></p> 
                             <div class="favorites">
 
                                 </div>
@@ -55,65 +55,66 @@
     </div>
 
 
-    <!-- this needs to appear or disapear-->
-    <div class="container form-container form-group pet-form">
-        <div class="row purple darken-4">
-            <form>
-                <div class="form-container formFillOut">
-                    <div class="col-md-4">
-                        Name:
-                        <input class="form-control" style="width: 10em" type="text " id="name" placeholder="Enter pet name" /> 
-                        Gender:
-                        <select class="form-control" style="width: 12em" type="text " id="gender" placeholder="Enter pet gender" />
-                        <option disabled selected value>--select an option--</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                        </select>
+   <!-- this needs to appear or disapear-->
+   <div class="container form-container form-group pet-form">
+    <div class="row purple darken-4">
+        <form>
+            <div class="form-container formFillOut">
+                <h1></h1>
+                <div class="col-md-4">
+                    Name:
+                    <input class="form-control" style="width: 12em" type="text " id="name" placeholder="Enter pet name" />
+                    Gender:
+                    <select class="form-control" style="width: 12em" type="text " id="gender" placeholder="Enter pet gender" />
+                    <option disabled selected value>--select an option--</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    </select>
 
-                    </div>
-                    <div class="col-md-4">
-                        Breed:
-                        <input class="form-control" style="width: 10em" type="text " id="breed" placeholder="Enter pet breed" />
-                       
-                        Color:
-                        <input class="form-control" style="width: 10em" type="text " id="color" placeholder="Enter pet color" /> 
-                       
-                    </div>
-                    <div class="col-md-4">
-                        Size:
-                        <select class="form-control" style="width: 12em" type="text " id="size" placeholder="Enter pet size" />
-                    
-                        <option disabled selected value>--select an option--</option>
-
-                        <option value="small">Small</option>
-
-                        <option value="medium">Medium</option>
-
-                        <option value="Large">Large</option>
-
-                        </select>
-
-                        Age:
-                        <input class="form-control" style="width: 10em" type="text " id="age" placeholder="Enter pet age" />
-                       
-                        
-                        
-                    </div>
-
-                    <div class="container4">
-                        E-mail:
-                        <input class="form-control" type="email " id="mail" placeholder="Enter your e-mail address"
-                        /> Post an image of your pet:
-                        <input class="form-control" type="url " id="img" placeholder="Enter pet img" />
-                    </div>
-                    
-                    <div class="col-md-offset-6">
-                    <button type="button" id="addpet" class="btn btn-primary"><i class="fas fa-plus"></i></button>
                 </div>
+                <div class="col-md-4">
+                    Breed:
+                    <input class="form-control" style="width: 20em" type="text " id="breed" placeholder="Enter pet breed" />
+                  
+                    Color:
+                    <input class="form-control" style="width: 20em" type="text " id="color" placeholder="Enter pet color" />
+                  
+                </div>
+                <div class="col-md-4">
+                    Size:
+                    <select class="form-control" style="width: 20em" type="text " id="size" placeholder="Enter pet size" />
+                
+                    <option disabled selected value>--select an option--</option>
+
+                    <option value="small">Small</option>
+
+                    <option value="medium">Medium</option>
+
+                    <option value="Large">Large</option>
+
+                    </select>
+
+                    Age:
+                    <input class="form-control" style="width: 10em" type="text " id="age" placeholder="Enter pet age" />
+                  
+                    
+                    
+                </div>
+
+                <div class="col-md-12">
+                    E-mail:
+                    <input class="form-control" type="email " id="mail" placeholder="Enter your e-mail address"
+                    /> Post an image of your pet:
+                    <input class="form-control" type="url " id="img" placeholder="Enter pet img" />
+                </div>
+                
+                <div class="col-md-offset-6">
+                <button type="button" id="addpet" class="btn btn-primary"><i class="fas fa-plus"></i></button>
             </div>
-            </form>
         </div>
+        </form>
     </div>
+</div>
 
 
     <script id="pet-template" type="text/x-handlebars-template">
@@ -121,8 +122,8 @@
                  <div class="show-pet" data-id="{{_id}}">
                     <div class="col-md-6">
                                     <div class="col-lg-12">
-                                            <h1>{{name}}</h1>
-                                        <img src="{{img}}" class=" polaroid-images proimage rounded md-auto d-block" alt=" ">
+                                            <h1 class="fly">{{name}}</h1>
+                                        <img src="{{img}}" class=" fly polaroid-images proimage rounded md-auto d-block" alt=" ">
                                         <div class="row btnRow">
                                                 <div class="col-xs-4">
                                                         <button type="button"  id = "unlike" class="btn btn-danger"><i class="fas fa-times"></i></button>
@@ -139,9 +140,9 @@
                                     <div class="info-container">
                                             <p class="list">
                                                     <ul class="order">
-                                                        <li>Name: {{name}}</li><li>Gender: {{gender}}</li>
-                                                        <li>Breed: {{breed}}</li><li>Color: {{color}}</li>
-                                                        <li>Size: {{size}}</li><li>Age: {{age}}</li>
+                                                        <li><b>Gender:</b>{{gender}}</li>
+                                                        <li><b>Breed:</b> {{breed}}</li><li> <b>Color:</b>{{color}}</li>
+                                                        <li><b>Size:</b> {{size}}</li><li><b>Age:</b> {{age}}</li>
                                                       
                                                        
                                                     </ul> 
@@ -156,7 +157,7 @@
     <script id="favorites-template" type="text/x-handlebars-template">
        
         <ul>
-          <li>{{name}}
+          <li><h2>{{name}}</h2>
               <br>
                 <img src="{{img}}" class="mini polaroid-images proimage rounded md-auto d-block" alt=" ">
           </li>

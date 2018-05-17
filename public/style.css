@@ -149,8 +149,15 @@ h1{
   }
 
 h2{
-    color: black;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    color:blueviolet ; 
+    font-weight: bold;
 }
 .hide   {
     display: none;
+}
+
+.font{
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-size: 30px;
 }

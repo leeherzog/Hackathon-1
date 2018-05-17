@@ -64,6 +64,7 @@ class EventsHandler {
             }
             registerTogglfavorites() {
                 $('.view-favorites').on('click', (event) => {
+                    $('.view-favorites').unbind("mouseenter mouseleave");
                     $('.favorites').toggleClass('hide');
                     event.preventDefault();
                   });

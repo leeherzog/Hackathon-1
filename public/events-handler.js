@@ -19,9 +19,9 @@ class EventsHandler {
             
             $('.pets').on('click',  '#like',() => {
                     console.log('like');
-                
+                    event.preventDefault();
                 var id = $(".pets").find(".show-pet").attr("data-id");
-                this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite(this.favorites.favorites)});
+                this.favorites.addFavorite(id).then(()=>{this.favorites.renderFavorite()});
                 this.petsRenderer.renderPets(this.petsRepository.pets); 
                
                 })
@@ -29,8 +29,9 @@ class EventsHandler {
             registerUnlikePet() {
 
                 $('.pets').on('click','#unlike', () => {
-                    $(this).addClass('magictime bombleftOut');
+                    $('#unlike').addClass('magictime bombleftOut');
                     console.log('unlike');
+                    event.preventDefault();
                     //function do not show
 
                     //function show next
@@ -61,7 +62,12 @@ class EventsHandler {
                     event.preventDefault();
                   });
             }
-            
+            registerTogglfavorites() {
+                $('.view-favorites').on('click', (event) => {
+                    $('.favorites').toggleClass('hide');
+                    event.preventDefault();
+                  });
+            }
 }
 
 export default EventsHandler

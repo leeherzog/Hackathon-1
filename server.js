@@ -9,7 +9,7 @@ var Pet = require('./models/petModel');
 
 const SERVER_PORT = process.env.PORT || '8080' ;
 
-mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/petsDB', function() {
+mongoose.connect( process.env.CONNECTION_STRING || 'mongodb://localhost/petsDB', function() {
   console.log("DB connection established!!!");
 })
 // Init app

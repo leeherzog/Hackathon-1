@@ -143,7 +143,7 @@ app.get('/likes/:id', (req, res) => {
 });
 
 
-app.listen(SERVER_PORT, () => {
+app.listen(SERVER_PORT, "0.0.0.0" ,  () => {
   console.log("Server started on port " + SERVER_PORT);
 });
 

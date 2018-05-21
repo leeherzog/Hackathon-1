@@ -7,7 +7,7 @@ var Pet = require('./models/petModel');
 // const ejs = require('ejs');
 // const path = require('path');
 
-const SERVER_PORT = process.env.PORT || '8080';
+const SERVER_PORT = (process.env.PORT || '8080') ;
 
 mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/petsDB', function() {
   console.log("DB connection established!!!");
